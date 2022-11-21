@@ -1,8 +1,12 @@
 // Add js here.
 let video = document.getElementById('videoplayer')
-video.autoplay = false;
-video.loop = false;
-console.log(video.attributes);
+
+window.addEventListener("load", function () {
+    console.log("Good job opening the window");
+    video.autoplay = false;
+    video.loop = false;
+    video.load();
+});
 
 let playButton = document.getElementById('play')
 playButton.addEventListener('click', function() {
